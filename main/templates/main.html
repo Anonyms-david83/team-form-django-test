@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+        <input type="text" name="fname" placeholder="نام">
+        <input type="text" name="lname" placeholder="نام خانوادگی">
+        <input type="number"  name="score" placeholder="نمره">
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}
+
+{% block title %} Home page {% endblock title %}
